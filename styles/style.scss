@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  color: #f5f5f5;
+  background-color: #2b2b2b;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.5rem;
+}
+h4,
+h5 {
+  font-size: 3rem;
+}
+p,
+span,
+button,
+select,
+option,
+input {
+  font-size: 2.5rem;
+}
+header {
+  margin: 3rem 5%;
+  h1 {
+    text-decoration: underline;
+  }
+}
+
+.beatmaker {
+  width: 90%;
+  margin: auto;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  //   align-items: center;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  margin: 3rem 0;
+}
+.controls {
+  gap: 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button,
+  select {
+    padding: 0.5rem 1rem;
+    background-color: #d6d1d1;
+    border: none;
+    border-radius: 1rem;
+  }
+}
+.kick,
+.snare,
+.hihat {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 6rem;
+  height: 6rem;
+  margin: 1.5rem;
+}
+.kick-pad {
+  background-color: rgb(179, 219, 233);
+}
+.snare-pad {
+  background-color: rgb(247, 170, 170);
+}
+.hihat-pad {
+  background-color: rgb(183, 182, 247);
+}
+.kick-pad.active {
+  background-color: rgb(70, 188, 231);
+}
+.snare-pad.active {
+  background-color: rgb(209, 89, 89);
+}
+.hihat-pad.active {
+  background-color: rgb(125, 124, 204);
+}
+.play {
+  margin-top: 4rem;
+  align-self: center;
+  padding: 1rem 4rem;
+}
+.mute.active {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.tempo-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.tempo-slider {
+  margin: 2rem 0;
+  text-align: center;
+  appearance: none;
+  height: 0.5rem;
+}
+
+@keyframes animationScale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  html {
+    font-size: 52%;
+  }
+}
+@media screen and (max-width: 970px) {
+  html {
+    font-size: 42%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .kick-track,
+  .snare-track,
+  .hihat-track {
+    flex-wrap: wrap;
+  }
+  .controls {
+    justify-content: center;
+    margin: 4rem 0;
+  }
+  .kick,
+  .snare,
+  .hihat {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .kick-pad,
+  .snare-pad,
+  .hihat-pad {
+    width: 4rem;
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 35%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .kick-pad,
+  .snare-pad,
+  .hihat-pad {
+    width: 3.2rem;
+    height: 10rem;
+  }
+}
